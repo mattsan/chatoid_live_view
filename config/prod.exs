@@ -10,7 +10,7 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :chatoid, ChatoidWeb.Endpoint,
-  url: [scheme: "https", host: "murmuring-dusk-96356.herokuapp.com", port: 433],
+  url: [scheme: "https", host: "murmuring-dusk-96356", port: 433],
   force_ssl: [rewirteon: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
