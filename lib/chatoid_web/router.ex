@@ -18,6 +18,7 @@ defmodule ChatoidWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    live "/chat", ChatLive
   end
 
   # Other scopes may use custom stacks.

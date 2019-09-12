@@ -1,0 +1,9 @@
+<h1>Chatoid</h1>
+
+<form phx-submit="post">
+  <input type="text" name="body">
+</form>
+
+<%= Enum.map @articles, fn article -> %>
+  <li><%= article.inserted_at %> - <%= article.body %></li>
+<% end %>
