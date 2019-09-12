@@ -15,7 +15,8 @@ config :chatoid, ChatoidWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "drjpnOJ/RrQkEQRRjRy7r2c1pOmc4Mr3nWvK22HeVpiXKzNOdwIVP1s2pB5Fq66M",
   render_errors: [view: ChatoidWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Chatoid.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: Chatoid.PubSub, adapter: Phoenix.PubSub.PG2],
+  live_view: [signing_salt: "chatoid_salt"]
 
 # Configures Elixir's Logger
 config :logger, :console,
