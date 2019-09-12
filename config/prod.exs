@@ -11,7 +11,7 @@ use Mix.Config
 # before starting your production server.
 config :chatoid, ChatoidWeb.Endpoint,
   url: [scheme: "https", host: "murmuring-dusk-96356.herokuapp.com", port: 443],
-  force_ssl: [rewirteon: [:x_forwarded_proto]],
+  force_ssl: [rewirte_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
