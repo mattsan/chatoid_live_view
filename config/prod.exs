@@ -10,9 +10,10 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :chatoid, ChatoidWeb.Endpoint,
-  url: [scheme: "https", host: "murmuring-dusk-96356.herokuapp.com", port: 443],
-  force_ssl: [rewrite_on: [:x_forwarded_proto]],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  url: [host: System.get_env("HOST"), port: {:system, "PORT"}],
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  check_origin: ["//#{System.get_env("HOST")}"],
+  server: true
 
 # Do not print debug messages in production
 config :logger, level: :info
